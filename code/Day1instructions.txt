@@ -1,0 +1,45 @@
+--- Day 1: Trebuchet?! ---
+Part 1:
+GOAL: 
+    a) Read in the input and extract the first digit and the last digit from each line in the txt document. 
+    b) Concatenate the two digits together to make a two digit number; this is the line's calibration value
+    c) Add all calibration values together and submit the result at the website.
+
+For example:
+```
+1abc2
+pqr3stu8vwx
+a1b2c3d4e5f
+treb7uchet
+```
+The calibration values of these four lines are 12, 38, 15, and 77. 
+Adding these together produces 142.
+
+Part 2:
+After successfully submitting the correct sum for part one, the second part is revealed. 
+Turns out the digits were not the only representation of numbers within the lines of text.  
+Throughout the strings there is sometimes the digits spelled out: 
+    one, two, three, four, five, six, seven, eight, and nine.  
+These also count as valid "digits".
+
+GOAL:
+a) Read in the input and extract the first and the last digits of either form.
+b) Concatenate the two digits together (convert to typical digit form if spelled out) making the calibration value
+c) Sum all calibration values together and submit the result at the website.
+
+For example:
+```
+two1nine
+eightwothree
+abcone2threexyz
+xtwone3four
+4nineeightseven2
+zoneight234
+7pqrstsixteen
+```
+The calibration values are 29, 83, 13, 24, 42, 14, and 76. Adding these together produces 281.
+
+For part b, I tried to use the regex function re.findall() but realized that three and eight 
+can run into each other "threeight", and this would not be found in re.findall() because it only
+finds non-overlapping patterns.  Instead I searched from each string position so I wouldn't miss
+any of these corner cases.  
