@@ -1,0 +1,47 @@
+--- Day 2: Cube Conundrum ---
+Part 1:
+
+Play game with elf.  
+Game set up: There is a bag with an unknown amount of red, green and blue cubes in it.
+Game steps: 
+1. Elf reaches in to the bag one or more times and grabs a handful of cubes. This represents a subset of the cubes in the bag and could be all the cubes.
+2. Keep track of the number of cubes in each color
+3. Steps one and two represent a single game, and several games are played, each game is labeled with a unique id number. 
+4. The elf wants to know which games could have been played if the bag contained only 12 red cubes, 13 green cubes, and 14 blue cubes.
+5. Sum the ids of the games that were identified in step 4 as possible and report the result to the website.
+
+For example:
+
+Game 1: 3 blue, 4 red; 1 red, 2 green, 6 blue; 2 green
+Game 2: 1 blue, 2 green; 3 green, 4 blue, 1 red; 1 green, 1 blue
+Game 3: 8 green, 6 blue, 20 red; 5 blue, 4 red, 13 green; 5 green, 1 red
+Game 4: 1 green, 3 red, 6 blue; 3 green, 6 red; 3 green, 15 blue, 14 red
+Game 5: 6 red, 1 blue, 3 green; 2 blue, 1 red, 2 green
+
+In game 1, three sets of cubes are revealed from the bag (and then put back again). The first set is 3 blue cubes and 4 red cubes; the second set is 1 red cube, 2 green cubes, and 6 blue cubes; the third set is only 2 green cubes.
+
+games 1, 2, and 5 would have been possible. 
+If you add up the IDs of the games that would have been possible, you get 8.
+
+
+
+--- Part Two ---
+Game Steps:
+    1. Determine the minimum number of cubes that would need to be in the bag to make each game possible.
+    3. Multiply the minimum number of each color together to determine the "power" of the given game.
+    3. Sum the powers for each game
+    4. Submit the sum of the powers to the website
+
+the example:
+
+Game 1: 3 blue, 4 red; 1 red, 2 green, 6 blue; 2 green
+Game 2: 1 blue, 2 green; 3 green, 4 blue, 1 red; 1 green, 1 blue
+Game 3: 8 green, 6 blue, 20 red; 5 blue, 4 red, 13 green; 5 green, 1 red
+Game 4: 1 green, 3 red, 6 blue; 3 green, 6 red; 3 green, 15 blue, 14 red
+Game 5: 6 red, 1 blue, 3 green; 2 blue, 1 red, 2 green
+
+
+In game 1, only 4 red, 2 green, and 6 blue cubes would be necessary to make it possible.
+The power of game one is 48. The sum of all the powers for the 5 games above is 2286
+
+
