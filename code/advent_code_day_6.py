@@ -4,10 +4,8 @@ import numpy as np
 import re
 import math
 
-#C:\Users\sarah\OneDrive\Documents\My Tableau Repository\Datasources\adventDay6_input.txt
+
 day = 6
-
-
 
 TEST_INPUT = ['Time:      7  15   30',
               'Distance:  9  40  200'

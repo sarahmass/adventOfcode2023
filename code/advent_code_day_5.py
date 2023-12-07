@@ -4,7 +4,7 @@ import numpy as np
 import re
 from math import inf
 
-#C:\Users\sarah\OneDrive\Documents\My Tableau Repository\Datasources\adventDay5_input.txt
+
 day = 5
 
 

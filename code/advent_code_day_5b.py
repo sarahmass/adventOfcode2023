@@ -4,7 +4,7 @@ import numpy as np
 import re
 from math import inf
 
-#C:\Users\sarah\OneDrive\Documents\My Tableau Repository\Datasources\adventDay5_input.txt
+
 day = 5
 
 
@@ -73,7 +73,7 @@ def clean_input(dataf, part = 'a'):
             line_no += 1
             conv_table[(source,dest)] = []
             
-            # converstion maps come in dest_v int, source_v int, range_value
+            # conversion maps come in dest_v int, source_v int, range_value
             while line_no < len(dataf) and dataf[line_no].strip() != '' and dataf[line_no].strip()[0].isdigit():
                 # extract source, dest, and range values
                 dest_v, source_v, range_v = map_to_int(dataf[line_no])

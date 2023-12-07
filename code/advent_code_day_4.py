@@ -4,10 +4,8 @@ import sys
 import numpy as np
 import re
 
-#C:\Users\sarah\OneDrive\Documents\My Tableau Repository\Datasources\adventDay1_input.txt
+
 day = 4
-
-
 
 TEST_INPUT = ["Card 1: 41 48 83 86 17 | 83 86  6 31 17  9 48 53",
               "Card 2: 13 32 20 16 61 | 61 30 68 82 17 32 24 19",
@@ -27,7 +25,7 @@ def read_input(day, test = False):
     return flines
 
 def extract_number_sets(card):
-    ''' in -> card: string  "card {int string}: winning ints | card's hopefulls ints
+    ''' in -> card: string  "card {int string}: winning ints | card's hopefuls ints
         the set of w are the numbers that need to be matched for a win
         the set of c are the numbers that need to match to the set of w
         
@@ -91,7 +89,7 @@ if __name__ == "__main__":
             # cards gets a copy made for each of the
             # current cards' copy.  They all start with one
             # copy.  If no matches then no cards will get 
-            # additional coppies.
+            # additional copies.
             for n in range(1,to_copy + 1):
                 if i+n < len(all_cards):
                     num_cards[i+n] += num_cards[i]
