@@ -100,19 +100,25 @@ def count_steps(pattern, conv_table, part='a', start = 'AAA'):
             return count
        
 if __name__ == '__main__':
+    time_start = time.time()
     test = False
-    part = "a"
+    part = "b"
     day = 8
     data = read_input(day = day, test=test)
     pattern, conv_table, starts = clean_input(data, part = part)
-    time_start = time.time()
     num_steps_all = []
-    count=1
+    count = 1
     for start in starts:
         num_steps = count_steps(pattern,conv_table, part,start)
-        num_steps_all.append(num_steps/277)
-        count *= num_steps/277
-    count *= 277
+        num_steps_all.append(num_steps)
+    gcd_steps = math.gcd(*num_steps_all)
+    count = gcd_steps
+    for num in num_steps_all:
+        num = num//gcd
+        count *= num
+    
     total_time = time.time() - time_start
-    print(f"day {day} advent of code part {part} answer was found in {total_time}sec: number of cycles through the 277 direction list {num_steps_all}")
-    print(f"total steps to make it to all destinations: {count}")
+    print(f"day {day} advent of code part {part} answer was found in {total_time}sec")
+    print(f"The number of cycles through the {len(pattern)} direction list {num_steps_all}")
+    print(f"Total steps to simultaneously land on patterns ending in a Z is the least")
+    print(f"common multiple of the numbers set of cycles and the pattern length: {int(count):,}")

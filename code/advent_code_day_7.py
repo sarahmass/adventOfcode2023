@@ -171,7 +171,6 @@ if __name__ == "__main__":
         for hand,bid in hands_sorted[hand_type]:
             
             total_winnings += bid * score
-            print(hand_type, hand, bid, score, total_winnings-bid*score, bid*score, total_winnings )
             score += 1
     print(f"total_winnings: {total_winnings}" )    
         
